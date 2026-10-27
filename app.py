@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(page_title="Dashboard 2023 na Música", layout="wide")
+st.set_page_config(page_title="Dashboard 2022 na Música", layout="wide")
 
 def carregar_dados():
-    url = "https://raw.githubusercontent.com/nicolascaseiro/2023-na-Musica/refs/heads/main/2023%20na%20M%C3%BAsica.csv"
+    url = "https://raw.githubusercontent.com/nicolascaseiro/2022-na-Musica/refs/heads/main/2022%20na%20M%C3%BAsica.csv"
     df = pd.read_csv(url, encoding='utf-8')
     return df
 
