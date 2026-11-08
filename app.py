@@ -59,7 +59,7 @@ df_tabela['Data do Álbum'] = pd.to_datetime(df_tabela['Data do Álbum'], errors
 df_tabela['Mês'] = df_tabela['Data do Álbum'].dt.month.apply(lambda x: meses_pt[x-1] if pd.notna(x) else None)
 total_musicas_filtradas = df_tabela['Música'].nunique()
 
-st.title("Dashboard 2023 na Música")
+st.title("Dashboard 2022 na Música")
 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total de músicas", total_musicas_filtradas)
@@ -74,7 +74,7 @@ df_grafico = df_filtrado.groupby('Gêneros_lista')['Popularidade'].mean().reset_
 fig = px.bar(df_grafico,
              x='Gêneros_lista',
              y='Popularidade',
-             title='Popularidade Média por Gênero Musical (2024)',
+             title='Popularidade Média por Gênero Musical (2022)',
              labels={'Gêneros_lista': 'Gênero', 'Popularidade': 'Popularidade Média'},
              color='Popularidade',
              color_continuous_scale='Viridis',
